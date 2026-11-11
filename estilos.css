@@ -184,6 +184,34 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .feature .actions { margin-top: auto; padding-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
 @media (min-width: 640px) { .feature .actions { flex-direction: row; align-items: center; } }
 
+/* Fotos de fondo con transparencia (portada del inicio y encabezados) */
+.hero-bg, .ph-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-bg { object-position: center 55%; }
+.hero-bg-veil { position: absolute; inset: 0; background: linear-gradient(180deg, oklch(0.985 0.008 220 / .9), oklch(0.985 0.008 220 / .82)); }
+@media (min-width: 1024px) {
+  .hero-bg-veil { background: linear-gradient(90deg, oklch(0.985 0.008 220 / .97) 0%, oklch(0.985 0.008 220 / .9) 40%, oklch(0.985 0.008 220 / .55) 62%, oklch(0.985 0.008 220 / .3) 100%); }
+}
+.hero2 .container { position: relative; }
+.ph-veil { position: absolute; inset: 0; background: linear-gradient(180deg, oklch(0.97 0.02 190 / .9), oklch(0.97 0.02 190 / .84)); }
+@media (min-width: 768px) {
+  .ph-veil { background: linear-gradient(90deg, oklch(0.97 0.02 190 / .96) 0%, oklch(0.97 0.02 190 / .88) 45%, oklch(0.97 0.02 190 / .55) 75%, oklch(0.97 0.02 190 / .4) 100%); }
+}
+.split-hero.has-bg .ph-veil { background: oklch(0.97 0.02 190 / .88); }
+
+/* Tarjeta principal: Empresas */
+.feature.lead { margin-bottom: 2rem; }
+.feature.lead .eyebrow { margin-bottom: .75rem; }
+.feature.lead h3 { font-size: 1.75rem; }
+.feature.lead .checks { margin-top: 1.5rem; }
+.feature.lead .checks li { font-size: .95rem; font-weight: 600; }
+@media (min-width: 1024px) {
+  .feature.lead { display: grid; grid-template-columns: 1.1fr 1fr; }
+  .feature.lead .media img { height: 100%; aspect-ratio: auto; min-height: 30rem; }
+  .feature.lead .body { padding: 3.5rem; justify-content: center; }
+  .feature.lead h3 { font-size: 2.4rem; }
+  .feature.lead .actions { margin-top: 0; padding-top: 2.25rem; flex-wrap: wrap; }
+  .feature.lead .actions .btn { white-space: nowrap; }
+}
 .photo { aspect-ratio: 4/3; width: 100%; object-fit: cover; border-radius: 2rem; box-shadow: var(--shadow-soft); }
 
 /* Gallery placeholders */
