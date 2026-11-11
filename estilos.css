@@ -571,6 +571,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .cf.paused .cf-dots button[aria-current="true"]::after { animation-play-state: paused; }
 @keyframes cfProgress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
+/* Fotos que cargan al bajar: aparecen con un fundido suave en lugar de "saltar" */
+.js img[loading="lazy"] { opacity: 0; transition: opacity .6s ease, transform .8s ease; }
+.js img[loading="lazy"].is-in { opacity: 1; }
+.job, .tile, .team figure, .process figure, .room, .service .media, .feature .media, .mq-card, .ba-item, .compare, .post-img { background-color: color-mix(in oklab, var(--mint) 35%, var(--cream)); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }

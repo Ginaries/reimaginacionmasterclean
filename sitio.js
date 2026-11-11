@@ -223,6 +223,13 @@
     });
   }
 
+  // Fundido de las fotos que cargan al bajar
+  document.querySelectorAll('img[loading="lazy"]').forEach(function (im) {
+    function show() { im.classList.add("is-in"); }
+    if (im.complete) show();
+    else { im.addEventListener("load", show); im.addEventListener("error", show); }
+  });
+
   // Año del pie
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
