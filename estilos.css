@@ -315,6 +315,19 @@ button, input, select, textarea { font: inherit; color: inherit; }
 /* Legal pages */
 .legal { max-width: 48rem; margin: 0 auto; padding: 4rem 1.25rem; display: grid; gap: 1.25rem; font-weight: 300; line-height: 1.65; color: color-mix(in oklab, var(--ink) 85%, transparent); }
 
+.legal { gap: 0; max-width: 46rem; padding-top: 3.5rem; padding-bottom: 5rem; }
+.legal > * + * { margin-top: 1rem; }
+.legal h2 { margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; color: var(--ink); }
+.legal h2 + * { margin-top: .85rem; }
+.legal ul { display: grid; gap: .6rem; padding-left: 0; }
+.legal li { position: relative; padding-left: 1.5rem; }
+.legal li::before { content: ""; position: absolute; left: .3rem; top: .65em; height: .4rem; width: .4rem; border-radius: 9999px; background: var(--brand-teal); }
+.legal a { font-weight: 600; color: var(--brand-deep); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: color-mix(in oklab, var(--brand-deep) 35%, transparent); }
+.legal a:hover { text-decoration-color: currentColor; }
+.legal-date { display: inline-block; justify-self: start; border-radius: 9999px; background: var(--accent); padding: .4rem .9rem; font-size: .75rem; font-weight: 700; letter-spacing: .04em; color: var(--brand-deep); }
+.legal-date + p { margin-top: 1.5rem; }
+.legal-note { border-radius: 1rem; border: 1px solid var(--border); background: color-mix(in oklab, var(--mint) 30%, var(--card)); padding: 1.1rem 1.25rem; font-size: .85rem; line-height: 1.6; }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--cream); }
 .footer-grid { display: grid; gap: 3rem; padding-top: 4rem; padding-bottom: 4rem; }
@@ -335,7 +348,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .footer-bottom .links { display: flex; gap: 1.25rem; }
 .footer-bottom a:hover { color: var(--brand-deep); }
 @media (min-width: 640px) { .footer-bottom .container { flex-direction: row; } }
-
 /* ---------- Floating WhatsApp ---------- */
 .wa-float { position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 50; display: flex; height: 4rem; width: 4rem; align-items: center; justify-content: center; border-radius: 9999px; background: var(--whatsapp); color: var(--white); box-shadow: var(--shadow-soft); transition: transform .2s; }
 .wa-float:hover { transform: scale(1.1); }
