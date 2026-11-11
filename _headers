@@ -1,0 +1,6 @@
+/img/*
+  Cache-Control: public, max-age=2592000
+/estilos.css
+  Cache-Control: public, max-age=86400
+/sitio.js
+  Cache-Control: public, max-age=86400
